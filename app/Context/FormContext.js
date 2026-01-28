@@ -8,6 +8,7 @@ export const FormContextProvider = ({children}) =>{
     const [email, setEmail] = useState('');
     const roles = ['Developer', 'Designer', 'Manager']
     const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+    const [selectedRole, setSelectedRole] = useState('')
 
     const contextValue = {
         fullName,
@@ -16,7 +17,9 @@ export const FormContextProvider = ({children}) =>{
         setEmail,
         roles,
         isTermsAccepted,
-        setIsTermsAccepted
+        setIsTermsAccepted,
+        selectedRole, 
+        setSelectedRole
     }
     return <FormContext.Provider value={contextValue}>
         {children}

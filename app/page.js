@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import {FormContextProvider} from './Context/FormContext'
 
 export default function Home() {
   return (
-      <div className="flex min-h-screen items-start justify-center font-sans">
+      <div className="flex flex-col min-h-screen items-start justify-start font-sans">
       <h1>Home Page</h1>
-      <Link href={'/basicInformation'}>User Details Form</Link>
+      <Link className={'py-2 bg-blue-100 text-black rounded-sm'}href={'/basicInformation'}>User Details Form</Link>
       </div>
   );
 }
